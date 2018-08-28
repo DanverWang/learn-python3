@@ -62,3 +62,17 @@ for i, value in enumerate(['A', 'B', 'C']):
 print('iter [(1, 1), (2, 4), (3, 9)]:')
 for x, y in [(1, 1), (2, 4), (3, 9)]:
     print(x, y)
+    
+#Use iteration to find the minimum and maximum values in a list and return a tuple:
+def findMinAndMax(L): 
+    if L == []:
+        return (None, None)
+    else:
+        min = L[0]
+        max = L[0]
+        for i in L:
+            if i > max:
+                max = i
+            if i < min:
+                min = i
+        return (min,max)
