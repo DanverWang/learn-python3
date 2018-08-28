@@ -14,3 +14,14 @@ print('R[-10:] =', R[-10:])
 print('R[10:20] =', R[10:20])
 print('R[:10:2] =', R[:10:2])
 print('R[::5] =', R[::5])
+
+#Use the slice operation to implement a trim() function to remove the spaces at the beginning and end of the string. 
+#Be careful not to call str's strip() method:
+def trim(s):
+    for j in s: 
+        if s[:1] == ' ':
+            s = s[1:]
+        elif s[-1:] == ' ':
+            s = s[:-1]
+    
+    return s
